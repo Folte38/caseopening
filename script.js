@@ -106,14 +106,6 @@ const opImg = document.getElementById("op-img");
 const openBtn = document.getElementById("open-btn");
 const fireworks = document.getElementById("fireworks");
 
-// 🔥 Feuerwerk anzeigen
-fireworks.style.display = "block";
-
-// nach 2 Sekunden wieder aus
-setTimeout(() => {
-    fireworks.style.display = "none";
-}, 4000);
-
 
 // ================================
 // JACKPOT COUNTER (PRO STREAMER)
@@ -276,6 +268,7 @@ overlay.onclick = () => overlay.style.display = "none";
 
 // START
 setStreamer("obsick");
+
 
 
 

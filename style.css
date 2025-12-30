@@ -244,13 +244,6 @@ body {
     object-fit: contain;
 }
 
-#fireworks {
-    display: none;
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-}
-
 /* ================= GEWINN AUF PNG ================= */
 
 .winner-box {
@@ -392,4 +385,5 @@ body {
     z-index: 900; /* unter Winner-Overlay (1000), über allem anderen */
     display: none;
 }
+
 

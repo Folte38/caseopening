@@ -1,3 +1,16 @@
+const SITE_PASSWORD = "OJT25";
+
+function checkPassword() {
+    const input = document.getElementById("password-input").value;
+    const error = document.getElementById("password-error");
+
+    if (input === SITE_PASSWORD) {
+        document.getElementById("password-overlay").style.display = "none";
+    } else {
+        error.style.display = "block";
+    }
+}
+
 // ================================
 // STREAMER + KISTEN (1:1 DEINE DATEN)
 // ================================
@@ -250,5 +263,6 @@ overlay.onclick = () => overlay.style.display = "none";
 
 // START
 setStreamer("obsick");
+
 
 

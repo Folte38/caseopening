@@ -178,10 +178,6 @@ function openCase(type) {
     if (!pool) return;
 
     reel.innerHTML = "";
-    overlay.style.display = "flex";
-	console.log("FEUERWERK TRIGGER");
-fireworks.style.display = "block";
-
 
     spinSound.currentTime = 0;
     spinSound.play().catch(() => {});
@@ -251,16 +247,24 @@ switch (win.dataset.rarity) {
 }
 
 
-        if (win.dataset.rarity === "jackpot") {
-            jackpotSound.currentTime = 0;
-            jackpotSound.play().catch(() => {});
-            addJackpot();
-        } else {
-            winSound.currentTime = 0;
-            winSound.play().catch(() => {});
-        }
+if (win.dataset.rarity === "jackpot") {
+    jackpotSound.currentTime = 0;
+    jackpotSound.play().catch(() => {});
+    addJackpot();
 
-        overlay.style.display = "flex";
+    // 🔥 Feuerwerk NUR BEIM JACKPOT
+    fireworks.style.display = "block";
+    setTimeout(() => {
+        fireworks.style.display = "none";
+    }, 2500);
+
+} else {
+    winSound.currentTime = 0;
+    winSound.play().catch(() => {});
+}
+
+overlay.style.display = "flex";
+
     }, 6200);
 }
 
@@ -268,6 +272,7 @@ overlay.onclick = () => overlay.style.display = "none";
 
 // START
 setStreamer("obsick");
+
 
 
 

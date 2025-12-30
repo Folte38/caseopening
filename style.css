@@ -1,0 +1,324 @@
+body {
+    margin: 0;
+    background: #0e0e0e;
+    color: white;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+/* TITEL */
+.title-main {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 48px;
+    color: gold;
+    text-shadow: 0 0 20px gold;
+}
+
+.title-sub {
+    color: #aaa;
+    margin-bottom: 20px;
+}
+
+/* STREAMER */
+.streamer-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 20px;
+}
+
+.streamer-btn {
+    width: 110px;
+    padding: 10px;
+    background: #111;
+    border: 2px solid #333;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.streamer-btn img {
+    width: 64px;
+    height: 64px;
+    image-rendering: pixelated;
+}
+
+.streamer-btn span {
+    display: block;
+    margin-top: 5px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 13px;
+}
+
+.streamer-btn.active {
+    border-color: gold;
+    box-shadow: 0 0 15px rgba(255,215,0,0.7);
+}
+
+/* KISTEN */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 120px;
+    margin-bottom: 20px;
+}
+
+#classic-img,
+#op-img {
+    width: 160px;
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    border-radius: 16px;
+}
+
+#classic-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255,215,0,0.6);
+}
+
+#op-img:hover {
+    transform: scale(1.06);
+    box-shadow: 0 0 26px rgba(255,0,0,0.75);
+}
+
+/* OPEN BUTTON */
+#open-panel {
+    margin-bottom: 25px;
+}
+
+#open-btn {
+    padding: 14px 40px;
+    font-size: 20px;
+    font-family: 'Orbitron', sans-serif;
+    background: #111;
+    border: 2px solid #444;
+    border-radius: 14px;
+    color: white;
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+#open-btn.enabled {
+    cursor: pointer;
+    opacity: 1;
+}
+
+#open-btn.enabled:hover {
+    transform: scale(1.06);
+    box-shadow: 0 0 20px rgba(255,255,255,0.3);
+}
+
+/* CASE */
+#case-area {
+    height: 240px;
+    background: #111;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    border-top: 3px solid gold;
+    border-bottom: 3px solid gold;
+}
+
+#marker {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background: red;
+    transform: translateX(-50%);
+    z-index: 10;          /* WICHTIG */
+    pointer-events: none;
+}
+
+
+#reel {
+    display: flex;
+    z-index: 1;
+}
+
+
+/* ITEMS */
+/* ================= ITEM AUFBAU ================= */
+
+.item {
+    width: 180px;
+    height: 210px;              /* etwas höher für Text */
+    margin: 0 10px;
+    display: flex;
+    flex-direction: column;     /* 🔴 ICON OBEN, TEXT UNTEN */
+    align-items: center;
+    justify-content: flex-start;
+    background: #1a1a1a;
+    border: 2px solid #333;
+    box-sizing: border-box;
+}
+
+/* ICON */
+.item img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    margin-top: 10px;
+}
+
+/* NAME UNTER DEM ICON */
+.item-name {
+    margin-top: 8px;
+    padding: 0 6px;
+    font-size: 12px;
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+    line-height: 1.1;
+    color: #ddd;
+    word-break: break-word;
+	
+.item.common .item-name { color: #bbb; }
+.item.rare .item-name { color: #3fa9f5; }
+.item.epic .item-name { color: #b84cff; }
+.item.legendary .item-name { color: gold; }
+.item.jackpot .item-name {
+   color: red;
+   text-shadow: 0 0 6px red;
+}
+
+}
+
+
+/* RARITY */
+.item.common { background: #1a1a1a; }
+.item.rare { background: #0b2a44; }
+.item.epic { background: #2a0b44; }
+.item.legendary { background: #3a2b00; }
+.item.jackpot { background: darkred; }
+
+/* LEGENDE */
+.rarity-legend {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    margin-top: 30px;
+}
+
+.legend-item {
+    padding: 6px 14px;
+    font-weight: bold;
+    border-radius: 6px;
+}
+
+.legend-item.common { background: #444; }
+.legend-item.rare { background: #3fa9f5; }
+.legend-item.epic { background: #b84cff; }
+.legend-item.legendary { background: gold; color: black; }
+.legend-item.jackpot { background: red; }
+
+/* JACKPOT COUNTER */
+#jackpot-counter {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #ff4d4d;
+    font-weight: bold;
+}
+
+/* WINNER */
+#winner-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;        /* 🔴 DAS IST DER FIX */
+}
+
+
+.winner-box {
+    background: #111;
+    padding: 20px;
+    border-radius: 14px;
+}
+
+#winner-img {
+    width: 160px;
+    height: 160px;
+    object-fit: contain;
+}
+
+#fireworks {
+    display: none;
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+}
+
+/* ================= GEWINN AUF PNG ================= */
+
+.winner-box {
+    position: absolute;
+    background: #111;
+    padding: 16px;
+    border-radius: 14px;
+    border: 2px solid #333;
+}
+
+#winner-img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    background: #1a1a1a;
+    border-radius: 10px;
+}
+
+/* Text liegt AUF dem Bild */
+#winner-name,
+#winner-type {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+    text-shadow: 0 0 6px black;
+}
+
+#winner-name {
+    bottom: 40px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#winner-type {
+    bottom: 16px;
+    font-size: 14px;
+    opacity: 0.85;
+}
+
+/* ================= KISTEN BESCHRIFTUNG ================= */
+
+.case-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Text unter der Kiste */
+.case-label {
+    margin-top: 10px;
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Kleine Kiste links */
+.case-label.small {
+    font-size: 14px;
+    color: #ccc;
+}
+
+/* Große Kiste rechts */
+.case-label.big {
+    font-size: 18px;
+    font-weight: bold;
+    color: gold;
+    text-shadow: 0 0 8px rgba(255,215,0,0.7);
+}

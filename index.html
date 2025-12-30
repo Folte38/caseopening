@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>ObsiCK – Kanalpunkte Kisten</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<h1 class="title-main">Kanalpunkte Kisten</h1>
+<h2 class="title-sub"></h2>
+
+<!-- STREAMER AUSWAHL -->
+<div class="streamer-tabs">
+    <div class="streamer-btn active" onclick="setStreamer('obsick')">
+        <img src="./items/streamer/obsick.png">
+        <span>ObsiCK</span>
+    </div>
+    <div class="streamer-btn" onclick="setStreamer('rqvenrr')">
+        <img src="./items/streamer/rqvenrr.png">
+        <span>Rqvenrr</span>
+    </div>
+    <div class="streamer-btn" onclick="setStreamer('tobi')">
+        <img src="./items/streamer/tobi.png">
+        <span>TobiWanNoobie</span>
+    </div>
+</div>
+
+<!-- KISTEN -->
+<div class="buttons">
+    <div class="case-wrap">
+        <img id="classic-img" src="./items/obsick/classic.png" onclick="selectCase('classic')">
+        <div class="case-label small">Kleine Kiste</div>
+    </div>
+
+    <div class="case-wrap">
+        <img id="op-img" src="./items/obsick/rank_op.png" onclick="selectCase('op')">
+        <div class="case-label big">Große Kiste</div>
+    </div>
+</div>
+
+
+<!-- CASE -->
+<div id="case-area">
+    <div id="marker"></div>
+    <div id="reel"></div>
+</div>
+
+<!-- LEGENDE -->
+<div class="rarity-legend">
+    <div class="legend-item common">Common</div>
+    <div class="legend-item rare">Rare</div>
+    <div class="legend-item epic">Epic</div>
+    <div class="legend-item legendary">Legendary</div>
+    <div class="legend-item jackpot">Jackpot</div>
+</div>
+
+<!-- JACKPOT COUNTER -->
+<div id="jackpot-counter">
+    Jackpots: <span id="jackpot-count">0</span>
+</div>
+
+<!-- KISTE ÖFFNEN -->
+<div id="open-panel">
+    <button id="open-btn" disabled>Kiste öffnen</button>
+</div>
+
+<!-- GEWINN -->
+<div id="winner-overlay">
+    <div class="winner-box">
+        <img id="winner-img">
+        <div id="winner-name"></div>
+        <div id="winner-type"></div>
+    </div>
+</div>
+
+<div id="fireworks"></div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,9 +1,3 @@
-const pw = prompt("Passwort eingeben:");
-if (pw !== "OJT25") {
-    document.body.innerHTML = "<h1 style='color:white;text-align:center;margin-top:40vh;'>Kein Zugriff</h1>";
-    throw new Error("Access denied");
-}
-
 // ================================
 // STREAMER + KISTEN (1:1 DEINE DATEN)
 // ================================
@@ -256,4 +250,5 @@ overlay.onclick = () => overlay.style.display = "none";
 
 // START
 setStreamer("obsick");
+
 

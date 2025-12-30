@@ -186,7 +186,10 @@ function openCase(type) {
     if (!pool) return;
 
     reel.innerHTML = "";
-    overlay.style.display = "none";
+    overlay.style.display = "flex";
+	console.log("FEUERWERK TRIGGER");
+fireworks.style.display = "block";
+
 
     spinSound.currentTime = 0;
     spinSound.play().catch(() => {});
@@ -273,6 +276,7 @@ overlay.onclick = () => overlay.style.display = "none";
 
 // START
 setStreamer("obsick");
+
 
 
 

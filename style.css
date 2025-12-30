@@ -382,3 +382,14 @@ body {
     display: none;
 }
 
+/* ================= FEUERWERK ================= */
+
+#fireworks {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background: url("./effects/fireworks.gif") center/cover no-repeat;
+    z-index: 900; /* unter Winner-Overlay (1000), über allem anderen */
+    display: none;
+}
+

@@ -104,6 +104,16 @@ const jackpotCountEl = document.getElementById("jackpot-count");
 const classicImg = document.getElementById("classic-img");
 const opImg = document.getElementById("op-img");
 const openBtn = document.getElementById("open-btn");
+const fireworks = document.getElementById("fireworks");
+
+// 🔥 Feuerwerk anzeigen
+fireworks.style.display = "block";
+
+// nach 2 Sekunden wieder aus
+setTimeout(() => {
+    fireworks.style.display = "none";
+}, 2000);
+
 
 // ================================
 // JACKPOT COUNTER (PRO STREAMER)
@@ -263,6 +273,7 @@ overlay.onclick = () => overlay.style.display = "none";
 
 // START
 setStreamer("obsick");
+
 
 
 

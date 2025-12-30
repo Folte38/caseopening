@@ -112,7 +112,7 @@ fireworks.style.display = "block";
 // nach 2 Sekunden wieder aus
 setTimeout(() => {
     fireworks.style.display = "none";
-}, 2000);
+}, 4000);
 
 
 // ================================
@@ -273,6 +273,7 @@ overlay.onclick = () => overlay.style.display = "none";
 
 // START
 setStreamer("obsick");
+
 
 
 

@@ -33,7 +33,7 @@ const streamerData = {
             { name: "250.000$", img: "./items/obsick/classic/item3.png", chance: 0.5, rarity: "jackpot" },
             { name: "1x Leuchtfeuer", img: "./items/obsick/classic/item6.png", chance: 0.2, rarity: "jackpot" },
             { name: "Kisten Upgrade", img: "./items/obsick/classic/item9.png", chance: 0.1, rarity: "jackpot" },			
-            { name: "OBSI JACKPOT", img: "./items/obsick/classic/jackpot_classic.png", chance: 0.001, rarity: "jackpot" }
+            { name: "OBSI JACKPOT", img: "./items/obsick/classic/jackpot_classic.png", chance: 90, rarity: "jackpot" }
         ],
         op: [
             { name: "Drachenei", img: "./items/obsick/big/item1.png", chance: 12, rarity: "epic" },
@@ -272,6 +272,7 @@ overlay.onclick = () => overlay.style.display = "none";
 
 // START
 setStreamer("obsick");
+
 
 
 

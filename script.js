@@ -30,10 +30,10 @@ const streamerData = {
             { name: "100.000$", img: "./items/obsick/classic/item3.png", chance: 5, rarity: "legendary" },
 			{ name: "64x Diamanten Blöcke", img: "./items/obsick/classic/item8.png", chance: 5, rarity: "legendary" },
             { name: "10 Minuten Abbauen", img: "./items/obsick/classic/item7.png", chance: 12, rarity: "epic" },
-            { name: "250.000$", img: "./items/obsick/classic/item3.png", chance: 0.5, rarity: "jackpot" },
-            { name: "1x Leuchtfeuer", img: "./items/obsick/classic/item6.png", chance: 0.2, rarity: "jackpot" },
-            { name: "Kisten Upgrade", img: "./items/obsick/classic/item9.png", chance: 0.1, rarity: "jackpot" },			
-            { name: "OBSI JACKPOT", img: "./items/obsick/classic/jackpot_classic.png", chance: 90, rarity: "jackpot" }
+            { name: "250.000$", img: "./items/obsick/classic/item3.png", chance: 0.05, rarity: "jackpot" },
+            { name: "1x Leuchtfeuer", img: "./items/obsick/classic/item6.png", chance: 0.02, rarity: "jackpot" },
+            { name: "Kisten Upgrade", img: "./items/obsick/classic/item9.png", chance: 0.01, rarity: "jackpot" },			
+            { name: "OBSI JACKPOT", img: "./items/obsick/classic/jackpot_classic.png", chance: 0.0001, rarity: "jackpot" }
         ],
         op: [
             { name: "Drachenei", img: "./items/obsick/big/item1.png", chance: 12, rarity: "epic" },
@@ -272,6 +272,7 @@ overlay.onclick = () => overlay.style.display = "none";
 
 // START
 setStreamer("obsick");
+
 
 
 

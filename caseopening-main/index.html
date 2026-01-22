@@ -1,0 +1,142 @@
+<div id="password-overlay">
+    <div id="password-box">
+        <h2>Zugriff geschützt</h2>
+        <input type="password" id="password-input" placeholder="Passwort eingeben">
+        <button onclick="checkPassword()">Betreten</button>
+        <div id="password-error">Falsches Passwort</div>
+    </div>
+</div>
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Kanalpunkte Kisten</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- PARTICLES CANVAS -->
+<canvas id="particles-canvas"></canvas>
+
+<!-- LOADING SCREEN -->
+<div id="loading-screen">
+    <div class="loading-content">
+        <div class="loading-spinner"></div>
+        <h2>Lade Kisten...</h2>
+    </div>
+</div>
+
+<h1 class="title-main">Kanalpunkte Kisten</h1>
+<h2 class="title-sub"></h2>
+
+<!-- KISTEN -->
+<div class="case-container">
+    <!-- OBSICK AVATAR -->
+    <div class="obsick-avatar">
+        <img src="./obsick.png" alt="ObsiCK">
+        <div class="avatar-name">ObsiCK</div>
+    </div>
+    
+    <div class="buttons">
+        <div class="case-wrap">
+            <img id="classic-img" src="./items/obsick/classic.png" onclick="selectCase('classic')">
+            <div class="case-label small">Kleine Kiste</div>
+        </div>
+
+        <div class="case-wrap">
+            <img id="op-img" src="./items/obsick/rank_op.png" onclick="selectCase('op')">
+            <div class="case-label big">Große Kiste</div>
+        </div>
+    </div>
+</div>
+
+
+<!-- CASE -->
+<div id="case-area">
+    <div id="marker"></div>
+    <div id="reel"></div>
+</div>
+
+<!-- LEGENDE -->
+<div class="rarity-legend">
+    <div class="legend-item common">Common</div>
+    <div class="legend-item rare">Rare</div>
+    <div class="legend-item epic">Epic</div>
+    <div class="legend-item legendary">Legendary</div>
+    <div class="legend-item jackpot">Jackpot</div>
+</div>
+
+<!-- JACKPOT COUNTER -->
+<div id="jackpot-counter">
+    Jackpots: <span id="jackpot-count">0</span>
+</div>
+
+<!-- SOUND TOGGLE -->
+<div id="sound-toggle">
+    <button id="sound-btn" onclick="toggleSound()">
+        <span id="sound-icon">🔊</span>
+    </button>
+</div>
+
+<!-- STATISTICS -->
+<div id="stats-panel">
+    <div class="stats-header">
+        <h3>Statistiken</h3>
+        <button onclick="toggleStats()">×</button>
+    </div>
+    <div class="stats-content">
+        <div class="stat-item">
+            <span>Gesamte Öffnungen:</span>
+            <span id="total-opens">0</span>
+        </div>
+        <div class="stat-item">
+            <span>Jackpots:</span>
+            <span id="total-jackpots">0</span>
+        </div>
+        <div class="stat-item">
+            <span>Legendär:</span>
+            <span id="total-legendary">0</span>
+        </div>
+        <div class="stat-item">
+            <span>Epic:</span>
+            <span id="total-epic">0</span>
+        </div>
+    </div>
+</div>
+
+<!-- HISTORY -->
+<div id="history-panel">
+    <div class="history-header">
+        <h3>Letzte Gewinne</h3>
+        <button onclick="toggleHistory()">×</button>
+    </div>
+    <div class="history-content" id="history-list">
+        <!-- History items will be added here -->
+    </div>
+</div>
+
+<!-- KISTE ÖFFNEN -->
+<div id="open-panel">
+    <button id="open-btn" disabled>
+        <span class="btn-text">Kiste öffnen</span>
+    </button>
+</div>
+
+<!-- GEWINN -->
+<div id="winner-overlay">
+    <div class="winner-box">
+        <img id="winner-img">
+        <div id="winner-name"></div>
+        <div id="winner-type"></div>
+    </div>
+</div>
+
+<div id="fireworks"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+
